@@ -30,7 +30,7 @@ h3. Step 3: SSH into your iPhone
 Open Terminal (/Applications/Utilities/Terminal.app) and run the following:
 
 {% highlight text %}
-{% highlight ruby %}ssh root@YOUR_IPHONE_IP
+ssh root@YOUR_IPHONE_IP
 {% endhighlight %}
 
 Your password is 'alpine' unless you've changed it
@@ -38,7 +38,7 @@ Your password is 'alpine' unless you've changed it
 h3. Step 4: Download needed files
 
 {% highlight text %}
-{% highlight ruby %}mkdir -p bin/fireeagle
+mkdir -p bin/fireeagle
 cd bin/fireeagle
 curl -O http://ericasadun.com/ftp/TUAW/findme/authcheck
 curl -O http://ericasadun.com/ftp/TUAW/findme/authtoken
@@ -49,7 +49,7 @@ curl -O http://ericasadun.com/ftp/TUAW/findme/pingwifi
 h3. Step 5: Create wrapper script
 
 {% highlight text %}
-{% highlight ruby %}cat > /var/root/bin/fireeagle/firewrapper << EOF
+cat > /var/root/bin/fireeagle/firewrapper << EOF
 date > /var/log/fire.log
 /var/root/bin/fireeagle/pingwifi
 /bin/sleep 7 
@@ -62,25 +62,25 @@ EOF
 h3. Step 6: Set executable bit on all files
 
 {% highlight text %}
-{% highlight ruby %}chmod a+x /var/root/bin/fireeagle/*
+chmod a+x /var/root/bin/fireeagle/*
 {% endhighlight %}
 
 h3. Step 7: Authenticate with FireEagle
 
 {% highlight text %}
-{% highlight ruby %}/var/root/bin/fireeagle/authtoken
+/var/root/bin/fireeagle/authtoken
 {% endhighlight %}
 
 This will open a MobileSafari window. Login to your FireEagle account and allow TrackMe to update your location. Then run:
 
 {% highlight text %}
-{% highlight ruby %}/var/root/bin/fireeagle/authcheck
+/var/root/bin/fireeagle/authcheck
 {% endhighlight %}
 
 h3. Step 8: Test!
 
 {% highlight text %}
-{% highlight ruby %}/var/root/bin/fireeagle/firewrapper
+/var/root/bin/fireeagle/firewrapper
 {% endhighlight %}
 
 After several seconds, you should be returned to a shell prompt. Now visit "FireEagle's My Location":http://fireeagle.yahoo.net/my/location page and login. You should see:
@@ -92,7 +92,7 @@ If not, please start over at Step 4. Something's gone wrong.
 h3. Step 9: Steup LaunchDaemon to ping FireEagle every 5 minutes
 
 {% highlight text %}
-{% highlight ruby %}cat > /Library/LaunchDaemons/com.fireeagle.ping.plist << EOF
+cat > /Library/LaunchDaemons/com.fireeagle.ping.plist << EOF
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>

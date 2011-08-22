@@ -41,7 +41,7 @@ And for comparison, a "Hello World" controller:
 So, let's fire up @ruby script/server@ and see what this gives us:
 
 {% highlight text %}
-{% highlight ruby %}  # traditional Controller
+  # traditional Controller
   $ curl 127.0.0.1:3000/old_poller/poller
     Hello World!
   
@@ -53,7 +53,7 @@ So, let's fire up @ruby script/server@ and see what this gives us:
 So, the point of all of these other "micro-frameworks" is that they're faster than Rails, right? Let's benchmark this new "Hello World" Metal:
 
 {% highlight text %}
-{% highlight ruby %}  # first, let's benchmark the traditional controller
+  # first, let's benchmark the traditional controller
   $ ab -n 1000 http://127.0.0.1:3000/old_poller/poller
   ... snip ...
   Requests per second:    408.45 [#/sec] (mean)
@@ -89,7 +89,7 @@ h3. Standalone Execution
 Additionaly, Rails Metal are able to be executed in a separate process from your Rails application using @rackup@:
 
 {% highlight text %}
-{% highlight ruby %}  rackup -s mongrel app/metal/poller.rb
+  rackup -s mongrel app/metal/poller.rb
 {% endhighlight %}
 
 This runs the Poller Metal separeately from Rails, on it's own port (@rackup@ defaults to @9292@). This is perfect if you have an action that's taking a very long time (for example a file upload) that you'd like to split out from the normal Rails request processing queue.
@@ -143,7 +143,7 @@ end
 Restart your server, and check out what happens:
 
 {% highlight text %}
-{% highlight ruby %}  $ curl 127.0.0.1:3000/poller
+  $ curl 127.0.0.1:3000/poller
     Hello Middleware!
 {% endhighlight %}
 

@@ -16,7 +16,7 @@ The SVN server for Marshmallow seems to be down, and I can't seem to get in touc
 h3. Example Usage
 
 {% highlight ruby %}
-{% highlight ruby %}#!/usr/local/bin/ruby
+#!/usr/local/bin/ruby
 
 require 'marshmallow'
 

@@ -11,7 +11,7 @@ Just a quick note to announce "Capazon":http://capazon.rubyforge.org/ "0.1.0":ht
 * Edit your your @config/deploy.rb@:
 
 {% highlight ruby %}
-{% highlight ruby %}require 'capazon'
+require 'capazon'
 
 #AWS login info
 set :aws_access_key_id, 'XXX'
@@ -35,7 +35,7 @@ set :aws_private_key_path, "#{Dir.pwd}/#{aws_keypair_name}-key"
 * @$ cap describe_images@
 
 {% highlight text %}
-{% highlight ruby %}  * executing task describe_images
+  * executing task describe_images
 IMAGE   ami-0386636a    rbuilder-online/nuxleus-1.3-x86_9327.img.manifest.xml   099034111737    available       true
 IMAGE   ami-08866361    rbuilder-online/test1-1.0-x86_9326.img.manifest.xml     099034111737    available       true
 IMAGE   ami-1281647b    rbuilder-online/mw-tour-1.6.8-x86_9458.img.manifest.xml 099034111737    available       true

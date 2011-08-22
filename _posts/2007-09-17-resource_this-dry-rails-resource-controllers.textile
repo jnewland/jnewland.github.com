@@ -22,13 +22,13 @@ I've always been annoyed at the lack of maintainability that comes with using mu
 h3. Enter resource_this
 
 {% highlight text %}
-{% highlight ruby %}git clone git://github.com/jnewland/resource_this.git
+git clone git://github.com/jnewland/resource_this.git
 {% endhighlight %}
 
 "*resource_this*":http://github.com/jnewland/resource_this/tree/master aims to solve this maintainability problem by making your stock resource controllers look like this:
 
 {% highlight ruby %}
-{% highlight ruby %}  class PostsController < ActionController::Base
+  class PostsController < ActionController::Base
    resource_this
   end
 {% endhighlight %}
@@ -36,7 +36,7 @@ h3. Enter resource_this
 Behind the scenes, this code is generated:
 
 {% highlight ruby %}
-{% highlight ruby %}  class PostsController < ActionController::Base
+  class PostsController < ActionController::Base
     before_filter :load_post, :only => [ :show, :edit, :update, :destroy ]
     before_filter :load_posts, :only => [ :index ]
     before_filter :new_post, :only => [ :new ]
@@ -145,7 +145,7 @@ Behind the scenes, this code is generated:
 Nested resources like so:
 
 {% highlight ruby %}
-{% highlight ruby %}  class CommentsController < ActionController::Base
+  class CommentsController < ActionController::Base
     resource_this :nested => [:posts]
   end
 {% endhighlight %}
@@ -153,7 +153,7 @@ Nested resources like so:
 This generates a very similar controller to the one above with adjusted redirects and one additional before_filter / loader method pair to grab the parent resource. In this case:
 
 {% highlight ruby %}
-{% highlight ruby %}  before_filter :load_post
+  before_filter :load_post
   
   def load_post
     @post = Post.find(params[:post_id])
@@ -165,7 +165,7 @@ The separation of logic - DB operations in before_filters, rendering in the stan
 Oh, there's also a generator:
 
 {% highlight text %}
-{% highlight ruby %}./script/generate resource_this FooKlass [title:string body:text]
+./script/generate resource_this FooKlass [title:string body:text]
 {% endhighlight %}
 
 This works just like the @resource@ generator, with the addition of the @resource_this@ line to your controller and a functional test. No views are generated, so the test focuses on the XML behavior of this controller.
