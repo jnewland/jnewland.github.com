@@ -1,0 +1,14 @@
+--- 
+layout: post
+typo_id: 3657
+title: Joyent Slingshot Demo Notes
+---
+"Eric Wagoner":http://www.ericwagoner.com/weblog/ gave a demo of the "Joyent's":http://joyent.com/newly newly released offline Rails application toolkit, "Slinghot":http://developers.joyent.com/. He's had access to Slingshot for a couple weeks ahead of the public release, and shared his early impressions with us tonight. These are rough notes from his presentation.
+
+* A local Slingshot app is distributed as a DMG on OS X, which is a full-stack Ruby VM plus your Rails apps. Lots of files. I mean, lots.: @$ find Radiant.app | wc -l -> 8087@
+* Server side, Slingshot uses a plugin that generates a 'sync' controller. This controller has several actions:
+** sync.up
+** sync.down
+** sync.log
+* These toss XML back and forth between the server and client app, containing the changed Models and some metadata.
+* *Synchronization conflicts are handled in your application's domain.* This is important to note - Slingshot is not a silver bullet for the age old offline/online synchronization problem. However, it lets you solve this problem however your application needs.

@@ -1,0 +1,12 @@
+--- 
+layout: post
+typo_id: 11
+title: rails 0.13
+---
+The web is about to *explode* with exciting new apps. There's a "beta gem":http://download.rubyonrails.com/ out for the upcoming version 0.13 of "Ruby on Rails":http://www.rubyonrails.com , which contains helpers methods for some crazy AJAX stuff developed by "script.aculo.us":http://script.aculo.us/demos.
+
+For example, you can make an "auto complete text field with *TWO LINES OF CODE*":http://script.aculo.us/demos/ajax/autocompleter. Further, "Drag 'n Drop shopping carts":http://script.aculo.us/demos/shop are trivial. This stuff is absolutely nuts.
+
+If you're not into "Ruby on Rails":http://www.rubyonrails.com, take a look *right now*. I'm involved in 4 Ruby on Rails projects right now (2 personal, 2 for profit) and the small amount of time I invested in learning RoR is generating amazing returns :)
+
+*UPDATE:* "Ruby on Rails 0.13":http://weblog.rubyonrails.com/archives/2005/07/06/rails-013-225-featuresfixes-in-75-days/ has been released! Go get it now!

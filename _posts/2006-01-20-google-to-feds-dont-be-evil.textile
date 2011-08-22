@@ -1,0 +1,14 @@
+--- 
+layout: post
+typo_id: 144
+title: "Google to Feds: Don't be Evil"
+---
+Sayeth "Ashok Ramani":http://www.kvn.com/attorneys_bio.php?id=33, representing Google, in their response a "subpoena":http://i.i.com.com/cnwk.1d/pdf/ne/2006/google-doj/mcelvain.declaration.pdf from the "Attorneys for Alberto R. Gonzoles'" demanding that "Google hand over a million search results":http://www.siliconvalley.com/mld/siliconvalley/13657386.htm:
+
+bq. "Google objects to Defendant's view of Google's higly proprietary queries database as a free resource that Defendant  can access and use, some levels removed, to formulate its own defense. *This is not an appropriate use of the federal courts' subpoena power*."
+
+bq. "*Moreover, Google's acceding to the Request would suggest that it is willing to reveal information about those that use its services. This is not a perception that Google can accept*."
+
+Basically, *DON'T BE EVIL, GONZO*.
+
+Word. Further analysis and updates at "Search Engine Watch":http://blog.searchenginewatch.com/blog/060119-060352.

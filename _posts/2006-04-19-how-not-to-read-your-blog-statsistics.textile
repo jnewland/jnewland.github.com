@@ -1,0 +1,74 @@
+--- 
+layout: post
+typo_id: 256
+title: "Hits = Shit : How (Not) to Read Your Blog Statsistics"
+---
+bq. _"There are three types of lies - lies, damn lies, and statistics." - Variously attributed to Benjamin Disraeli, Alfred Marshall, Mark Twain and many other dead people._
+
+Most blog hosts come with some sort of statistics package - AWStats, Webalizer, or something of the like. Add-on stats packages are dime-a-dozen these days - many of you have heard of Google Analytics, Mint, and Measure Map. All of these tools bombard you with tables of numbers and bar graphs about how many _Hits_, _Visits_, and _Unique Visitors_ have browsed your site. However, *not a single stats package out there can tell you if your blog is actually succeeding*.
+
+h3. What is Success?
+
+Success for a blog cannot be measured in Kilobytes, Hits, or Unique visitors, because *every blog has a different goal*. Some blogs were started with the goal of giving the writer a sense of validation that their ideas and concepts were interesting to strangers on the internet. Some blogs have a goal of selling more of their company's product or service. Other blogs are designed to make money off of advertising.
+
+Before even thinking about looking at your blog's stats package, think about what success means for your blog. You should never use your blog's stats package simply as a source for raw numbers, but rather, *use it as a tool to help you gauge how you are working towards your blog's goal*.
+
+h3. Hits == Shit
+
+If your blog's stats package mentions the word 'Hits' in any capacity, please *never look at it again*. In fact, it might be to your best interest to place a piece of duct tape over that part of your monitor, just so you're never tempted to look at that silly, inflated, and sadly overused gauge of blog performance ever again.
+
+Hits, as defined on the support page of Webalizer, "represent the total number of requests made to the server." Let's think about this for a second. 
+
+When one person requests your blogs home page, their browser will in turn request the following assets:
+
+* Stylesheets
+* Images
+* Javascripts
+
+If you have, say, 7 graphics, 2 stylesheets, and 1 javascript file linked in your blog's template, *each time a person loads any page on your blog, your stats package will show 11 hits.* 
+
+Further, most stats packages that track 'Hits' include visits from search engine spiders, such as the GoogleBot and the MSNBot in this number. You'd be surprised to see how many times the MSNBot comes around for how poor MSN.com search results are - I've seen it account for 5% of a blog's 'Hits' before.
+
+The 'Hits' section of your blog stats is intended to be viewed be System Administrators to ensure your webserver is powerful enough to serve all of your files, not by you. I've seen 'hits' quoted in so many publications it makes me sick: "Our website got 50,000 hits this month!" With enough tiny tiny images, one website can get 50,000 hits with one pageview. No matter what your blog's goal, hits are not a way to measure any sort of success.
+
+h3. Not all Visits are Equal
+
+I was just told an anecdote about a very niche blog (Campaign Finance was the subject) whose author, after blogging steadily for several months, was disappointed to find that his blog's stats package only showed 200 Unique Visitors for the past month. He didn't post for a few days, discouraged that his site wasn't making any impact.
+
+In the days that followed, this blogger received emails from some of the largest Political Action Committees in the nation, asking him why he had stopped posting. After further investigation, it was determined that almost all of the unique visitors in recent months had come from visitors at PACs all across the nation. Had this blogger relied on statistics alone, he would have thought his blog was a failure. Rather than being a failure, however, his blog was reaching exactly the audience that he intended - the biggest PACs in the nation.
+
+This is a great example of why relying solely upon numbers to track your blog's performance is never a good idea. 
+
+h3. What Should I Watch?
+
+No matter the goal you've set for your blog, some of the following items are good ways to gauge your blog's progress towards that goal:
+
+h3. Trends
+
+If your stats package will let you track 'Visits' in a way that you can see trends, that section of your stats if absolutely worth monitoring. Some show a graph, some have numbers comparing this week to last week or this month to last month. However it's displayed, a steady trend of growth is a great indicator that your blog is improving.
+
+h3. Referrers
+
+Referrers are sites that have a link to page on your blog that one or more person has clicked one, and ended up somewhere on your blog. This is a great way to track who is talking about you or who is recommending your product or service. Tracking your referrers is also a good way to gauge what other bloggers think about you and your blog - words are better than numbers any day.
+
+h3. Searches
+
+I was amazed when I started my blog at the staggering numbers that found it through Google. Watching the "Searches" section of my stats let me see what posts were popular, and what my readers were looking for when they came to my blog. Subtle adjustments to your content and/or niche subject based on what you see that your readers are looking for may help your blog achieve it's goal much quicker than you thought.
+
+h3. Comments
+
+Comments both on your blog and via email to you about your blog are good indications you're tickling your readers' fancy. Not many stats packages currently track comments on your blog, and none can track emails to bloggers, but these are both worth monitoring in some capacity.
+
+If you're goal is to sell more of your company's products or  services on your blog, this may be the best measure of success there is. If you sell just one widget or massage or website to someone that contacted you via your blog, that's one more sale than you would have had without it. One sale can turn into hundreds in no time at all.
+
+h3. Conclusion
+
+So, next time you're wondering how your blog is doing, make sure that piece of duct tape is secure over the 'Hits' meter, and think about these things:
+
+* Know your blog's goal
+* Hits are shit
+* Not all visits are equal
+* Look for positive growth
+* Monitor your referrers
+* Think about how searchers are finding your content
+* Comments are key

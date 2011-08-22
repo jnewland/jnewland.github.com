@@ -1,0 +1,30 @@
+--- 
+layout: post
+typo_id: 73
+title: Verizon are sleazebags
+---
+If you were to ask me right now, "Say, Jesse what time of the month is it?" I would probably answer:
+
+bq. _"It's *VERIZON BILLING ERROR* time!!!!"_
+
+That's right folks, for the *third straight month* I've spent hours on the phone with Verizon correcting billing errors. The problem has been data minutes the past two months, and Verizon's habit of conveniently forgetting that I'm on the National Access Data Plan and charging me by the minute for data. They seem to have cleared that issue up this month: the issue this month is Verizon's free in-network calling feature, and it's (seemingly variable) status on our plan.  
+
+!http://www.gizmodo.com/gadgets/images/verizon_is_evil.jpg!
+
+Here's a breakdown of our most recent billing error:
+
+On a support call a year agon, Verizon customer support representative told my sister (we're on a family plan) she was 'IN,' which was being advertised on TV as free calling to all Verizon Subscribers. (To those of you with your bill handy, this is usage type *M*).
+
+Yet, on our most recent bill, only 73 peak 'IN' minutes were registered, when over 1700 were used. These 1700 minutes were billed as normal, causing 300+ minutes of overage charges.
+
+I called customer support, an was greeted by a friendly representative named Peaches (I kid you not) who, when presented with my question about overage charges, first told me that we all had 'IN' calling and this bill was in error. But then Peaches quickly retorted, saying, "Oh, only the primary number has 'IN' Calling! 706-340..."
+
+I recited the last 4 digits of *my* phone number with her and said, "That's me! That's the number I'm calling from and that's who has the 1700 'IN' minutes that were billed!"
+
+Peaches then said she was "checking my contract." She then told me that we did not have 'IN' calling, and that 'IN' calling didn't exist when we got the plan. We had free calls between numbers on our plan, but no other Verizon subscribers.
+
+Peaches then went on to say that even if we did have 'IN' calling, that it wouldn't have saved us any money, because 'IN' calling only works in-state and most of the 1700 minutes were out-of-state calls. My girlfirend anxious about her bill because of this: she signed up for 'IN' calling so she could call from Montana. 
+
+I don't know about you, but after recalling and typing this, the way Peaches, when presented with each discrepency with the bill, found a bigger hole in the 'IN' calling feature, and finally declared it non-existant. Then, to my utter disbelief, when I further argued my point, Peaches went as far as declare that the 'IN' calling feature only works your home region. (Can anyone verify this? I think it's a flat out lie!) *This stepwise, methodical reduction of features in response to billing questions seems practiced, to the point of being coached.*
+
+Anyway, we're not new to this sleazy, sleazy game Verizon plays. My Dad has a special line to a manager at customer support: he'll be calling her first thing in the morning. A fresh copy of our contract is being mailed to us, to compare with the one we have on file to ensure nothing changed while Peaches "checked" it. We'll have our revenge, may it be though cancellation or a third-month-in-a-row billing error credit. Be sure of that.

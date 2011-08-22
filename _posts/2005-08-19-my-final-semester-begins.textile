@@ -1,0 +1,38 @@
+--- 
+layout: post
+typo_id: 44
+title: My Final Semester Begins...
+---
+This past Thursday marked the first day of my final semster at the "University of Georgia":http://www.uga.edu in Athens. After a couple of days of strenuous syllabus sorting, things will "actually get started":http://wiki.jnewland.com/uga/published on Tuesday. (I do have one class on Monday, but it's a breeze :] ) Here are the classes I'm getting ready for:
+
+*Management Information Systems 4620 : _Systems Analysis and Design_*
+ 
+** _Systems analysis and design with emphasis on the development of business application systems. Methods of system documentation are examined through the use of object-oriented and structured analysis tools and techniques for describing processes, use cases, data structures, system objects, file designs, input and output designs, and program specifications._
+
+** This seems like it will be a good bit of work. Eek.
+
+*Management Information Systems 4630 : _ Network-Based Application Development_*
+
+** _Network-based application development using a current development language and platform. Concepts include application development strategies and techniques, web technology platforms, a web development language and web services. Projects will involve development of a network-based application for an organization._
+
+** Web apps built using JSP and Servlets basically. Boo Java.
+
+*Management Information Systems 5640 : _  Network Management_*
+
+** _Basic computer networking technology concepts, standards, products, services, security, and emerging technologies. This course starts with basic networking, progressing to use of networking to deliver and manage network applications / services. While the focus of the course is around the Internet, the application of the concepts extends to other networks._
+
+** We have to write a web app that searches an existing web service for this class. "flickr.rb":http://redgreenblu.com/flickr/ and "Ruby on Rails":http://www.rubyonrails.com anyone? This should be fun.
+
+*Management Information Systems 5990 : _  Directed Study_*
+
+** I convinced "Dr. Peircy":http://www.terry.uga.edu/~cpiercy/ to sponsor me for a 3 hour directed study course. I'll be catching him up on "Ruby on Rails":http://www.rubyonrails.com and helping him with some of his web development projects.
+
+*Economics 2100: _Economics of Environmental Quality_*
+
+** _The economic analysis of environmental issues, with discussions of current environmental quality problems, their underlying causes, and command vs. market-based solutions._
+
+** Sounds pretty interesting to me. For an ECON class, that is :)
+
+For those still reading, I'm not done yet. I'm taking all of those classes (*15 hours*) working *19 more hours* at Digital Insight, actively developing *3 projects* in "Ruby on Rails":http://www.rubyonrails.com, and am anxiously awaiting news about a new job. Sometimes, I really just don't know how I manage it all :).
+
+Needless to say, I can't wait for all of this madness to end. It'll be nice to be done with school, for one. But most of all, I just can't wait to move out to Bozeman, MT to be with my beautiful girlfriend...

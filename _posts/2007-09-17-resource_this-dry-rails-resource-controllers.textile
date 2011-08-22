@@ -1,0 +1,175 @@
+--- 
+layout: post
+typo_id: 3841
+title: resource_this - DRY Rails Resource Controllers
+---
+<notextile>
+<div style="float:left;margin:10px;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5165033129816339";
+//250x250, created 11/22/07
+google_ad_slot = "4463239324";
+google_ad_width = 250;
+google_ad_height = 250;
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</notextile>
+
+I've always been annoyed at the lack of maintainability that comes with using multiple resource controllers in my Rails apps. Each generated resource controller clocks in at 85 lines, and most of mine only differ from each other by a line or two - an added @before_filter@ or a change in the url that the users is redirected to after the creation of a new Widget. Not very "DRY":http://en.wikipedia.org/wiki/Don%27t_repeat_yourself. When coming back to each one of these controllers to add or adjust features, it takes me entirely too much time to sift through the stock 85 lines and find my application-specific behavior.
+
+h3. Enter resource_this
+
+{% highlight text %}
+{% highlight ruby %}git clone git://github.com/jnewland/resource_this.git
+{% endhighlight %}
+
+"*resource_this*":http://github.com/jnewland/resource_this/tree/master aims to solve this maintainability problem by making your stock resource controllers look like this:
+
+{% highlight ruby %}
+{% highlight ruby %}  class PostsController < ActionController::Base
+   resource_this
+  end
+{% endhighlight %}
+
+Behind the scenes, this code is generated:
+
+{% highlight ruby %}
+{% highlight ruby %}  class PostsController < ActionController::Base
+    before_filter :load_post, :only => [ :show, :edit, :update, :destroy ]
+    before_filter :load_posts, :only => [ :index ]
+    before_filter :new_post, :only => [ :new ]
+    before_filter :create_post, :only => [ :create ]
+    before_filter :update_post, :only => [ :update ]
+    before_filter :destroy_post, :only => [ :destroy ]
+
+  protected
+    def load_post
+      @post = Post.find(params[:id])
+    end
+  
+    def new_post
+      @post = Post.new
+    end
+  
+    def create_post
+      @post = Post.new(params[:post])
+      @created = @post.save
+    end
+  
+    def update_post
+      @updated = @post.update_attributes(params[:post])
+    end
+  
+    def destroy_post
+      @post = @post.destroy
+    end
+  
+    def load_posts
+      @posts = Post.find(:all)
+    end
+  
+  public
+    def index
+      respond_to do |format|
+        format.html
+        format.xml  { render :xml => @posts }
+        format.js
+      end
+    end
+
+    def show          
+      respond_to do |format|
+        format.html
+        format.xml  { render :xml => @post }
+        format.js
+      end
+    end
+
+    def new          
+      respond_to do |format|
+        format.html { render :action => :edit }
+        format.xml  { render :xml => @post }
+        format.js
+      end
+    end
+
+    def create
+      respond_to do |format|
+        if @created
+          flash[:notice] = 'Post was successfully created.'
+          format.html { redirect_to @post }
+          format.xml  { render :xml => @post, :status => :created, :location => @post }
+          format.js
+        else
+          format.html { render :action => :new }
+          format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
+          format.js
+        end
+      end
+    end 
+
+    def edit
+      respond_to do |format|
+        format.html
+        format.js
+      end
+    end
+
+    def update
+      respond_to do |format|
+        if @updated
+          flash[:notice] = 'Post was successfully updated.'
+          format.html { redirect_to @post }
+          format.xml  { head :ok }
+          format.js
+        else
+          format.html { render :action => :edit }
+          format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
+          format.js
+        end
+      end
+    end
+
+    def destroy          
+      respond_to do |format|
+        format.html { redirect_to :action => posts_url }
+        format.xml  { head :ok }
+        format.js
+      end
+    end
+  end
+{% endhighlight %}
+
+Nested resources like so:
+
+{% highlight ruby %}
+{% highlight ruby %}  class CommentsController < ActionController::Base
+    resource_this :nested => [:posts]
+  end
+{% endhighlight %}
+
+This generates a very similar controller to the one above with adjusted redirects and one additional before_filter / loader method pair to grab the parent resource. In this case:
+
+{% highlight ruby %}
+{% highlight ruby %}  before_filter :load_post
+  
+  def load_post
+    @post = Post.find(params[:post_id])
+  end
+{% endhighlight %}
+
+The separation of logic - DB operations in before_filters, rendering in the standard resource controller methods - makes this approach ridiculously easy to customize. Need to load an additional object for the @:show@ action? Slap another before_filter on it. Need to change the path that the @:update@ action redirects to? Override the @:update@ action with your new rendering behavior. And this customized behavior sticks out like a sore thumb - making it infinitely easier to maintain.
+
+Oh, there's also a generator:
+
+{% highlight text %}
+{% highlight ruby %}./script/generate resource_this FooKlass [title:string body:text]
+{% endhighlight %}
+
+This works just like the @resource@ generator, with the addition of the @resource_this@ line to your controller and a functional test. No views are generated, so the test focuses on the XML behavior of this controller.
+
+h3. Contributing
+
+"resource_this":http://github.com/jnewland/resource_this/tree/master is hosted on "GitHub":http://github.com, so feel free to fork it and send a "pull request":http://github.com/guides/pull-requests with your changes.

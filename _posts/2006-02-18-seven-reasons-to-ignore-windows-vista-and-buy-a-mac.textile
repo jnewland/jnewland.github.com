@@ -1,0 +1,58 @@
+--- 
+layout: post
+typo_id: 158
+title: Seven Reasons to Ignore Windows Vista and Buy a Mac
+---
+In an article entitled "Ten Reasons to Buy Windows Vista":http://news.yahoo.com/news?tmpl=story&u=/ttpcworld/20060210/tc_techtues_pcworld/124642&cid=1740&ncid=1729,  Michael Desmond at PCWorld gives what he thinks are ten things "to be excited about" in regards to the upcoming release of Vista. He really only gives nine reasons, as the last is hype about a promised feature:
+
+bq. Jim Allchin, Microsoft's co-president, says that Windows Vista boasts a re-engineered install routine, which will slash setup times from about an hour to as little as 15 minutes.
+
+After reading through the nine real reasons, only *two* mention features not currently available on my shiny Powerbook. I'll touch on those later - first, here are "Seven Reasons to Ignore Windows Vista and Buy a Mac".
+<ol>
+<li>Security, security, security
+
+Michael gets all excited about three security features Mac OS X Tiger "has had for more than a year now":http://www.apple.com/macosx/features/security/; a firewall, home directory encryption, and non-admin user accounts. Once the first *real* virus for OS X appears, we'll talk about security.
+
+</li>
+<li>Internet Explorer 7
+
+Are you kidding me? This "badly designed":http://rentzsch.com/suck/stopStopStopHurtingTheInternet Firefox/Safari ripoff makes "no improvements":http://news.com.com/Next+Explorer+to+fail+Acid+test/2100-1032_3-5813897.html in the quest for web standards. Thanks alot, M$.
+
+</li>
+<li>Righteous eye candy
+
+One of the critical new features of Vista's new UI interface:
+
+bq. "...hover your cursor over minimized programs that rest on the taskbar and you'll be able to see real-time previews of what's running in each window without opening them full-screen..."
+
+Hmm..sounds a bit like the Dock to me, eh?
+
+</li>
+<li>Desktop search
+
+I guess since WinFS didn't pan out, M$ decided they'd just copy "Spotlight":http://www.apple.com/macosx/features/spotlight/. Lame.
+
+</li>
+<li>Better updates
+
+This is getting boring. See "Software Update":http://www.apple.com/macosx/upgrade/softwareupdates.html
+
+</li>
+<li>More media
+
+What? Did you say there's a "Music Player":http://www.itunes.com? A "Photo Management App":http://www.apple.com/ilife/iphoto/? A "DVD Creation App":http://www.apple.com/ilife/imovie/? I'm sorry, I didn't hear you: I was busy making a DVD of my photos and music on my Mac.
+
+</li>
+<li>Parental controls
+
+Aww, how cute. Michael's description of features sounds just like OS X's "Parental Controls":http://www.apple.com/macosx/features/family/
+
+</li>
+</ol>
+
+Michael does makes two valid points:
+
+# The backup solutions included in Vista are better than those included free in OS X - but a ".Mac":http://www.mac.com account not only allows you to backup your files, but synchronize them between computers.
+# Windows Collaboration, apparently the fruit's of Microsoft's deal with "WebEx":http://www.webex.com, looks interesting. Won't do any good if you're collaborating in a multi-platform environment though.
+
+All of this hype over Vista seems completely wasted. I'd much rather "unpack a new MacBook Pro":http://flickr.com/photos/andrewescobar/sets/72057594066307201/  anyday. Do yourself a favor and "make the switch":http://www.apple.com/switch/. I promise you won't look back.

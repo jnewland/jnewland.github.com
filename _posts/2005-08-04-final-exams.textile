@@ -1,0 +1,8 @@
+--- 
+layout: post
+typo_id: 41
+title: Final Exams
+---
+A *106* on the final in in Java (MIST 4600) brings me to a final average of *98.52%*. Pretty convincing argument that I should have been allowed to skip the course, eh?
+
+I have my last final of summer semester tomorrow morning at 8am. It's in my SQL/XML (MIST 4610) class, which proved to be pretty valuable. The test is open-notes/book/reference, so I printed out "these":http://del.icio.us/jbnewland/toprint web pages to have on hand tomorrow morning. I think I'll be ready.

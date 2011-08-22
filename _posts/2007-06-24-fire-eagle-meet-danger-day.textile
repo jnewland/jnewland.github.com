@@ -1,0 +1,52 @@
+--- 
+layout: post
+typo_id: 3836
+title: Fire Eagle, meet Danger Day
+---
+<a name="instructions"></a> <span style="color:red">*UPDATE*: These instructions are out of date. See "here":http://soylentfoo.jnewland.com/articles/2008/03/06/fire-eagle-location-aware-applications-without-the-hassle for instructions that work with the new "Fire Eagle":http://fireeagle.com!</span>
+
+A couple days ago, a "friend of mine":http://cjmart.in/ sent me an invite for "Fire Eagle":http://fireeagle.research.yahoo.com/, "Yahoo! Research Berkley's":http://yahooresearchberkeley.com/ nifty closed-Alpha location storage and query engine, and I've been hooked ever since. For the rest of you without access, here's a brief overview of what FireEagle does, straight from the "FAQ":http://fireeagle.research.yahoo.com/faq.php page:
+
+bq. Fire Eagle is a site that keeps track of your current location and helps you share it with other sites and services safely. There are hundreds of potential applications.
+
+bq. Fire Eagle allows you to share your locations with other sites and services safely, through a secure server - you are always in control. You can decide to share your location with any application that can use it, and even choose how much detail to give that application (exact point, neighborhood, city, state, country).
+
+So, I whipped up a "quick Fire Eagle Rubygem":http://fireeagle.rubyforge.org/ to make it easier to deal with Fire Eagle's API. The next logical step? A "twitter bot":http://twitter.com/dangerday.
+
+h3. Fire Eagle, meet Danger Day
+
+If you're lucky enough to have an invite to Fire Eagle, here's how you can use it on Twitter:
+
+# Follow "Danger Day":http://twitter.com/dangerday on Twitter
+# Sign in to "Fire Eagle":http://fireeagle.research.yahoo.com/
+# "Authorize Danger Day with your FireEagle account":http://fireeagle.research.yahoo.com/authorize.php?appid=FpXV3T9XL3K1orRwoTZ6DKkC7w4-&callback=http://twitter.com/dangerday/statuses/116323112
+# Get a <a href="http://fireeagle.research.yahoo.com/displayToken.php?appid=FpXV3T9XL3K1orRwoTZ6DKkC7w4- ">mobile token</a> to confirm your authentication with Danger Day
+# Send a direct message to Danger Day with your token.
+
+Once that's done, you can update your location with a direct message to Danger Day like so:
+
+* u Atlanta, GA
+* u Belize
+* u 30022
+* u 123 Anytown USA
+* etc
+
+If you'd like to do this via your mobile phone, make sure your mobile is "setup with Twitter":http://twitter.com/devices, then send the following text massage to *40404*, Twitter's short code:
+
+* d dangerday u Atlanta, GA
+
+To look up the location of someone else using Danger Day:
+
+* q jnewland
+* q cjmartin
+* q plasticbagUK
+
+or from your mobile:
+
+* d dangerday q jnewland
+
+h3. What's next?
+
+I'm getting married in a week, so I leave the creation of cooler Fire Eagle apps as an exercise to the reader. Extra bonus points if you use the "Fire Eagle Rubygem":http://fireeagle.rubyforge.org/. If you've got a great idea for a Fire Eagle app and don't have an invite, get in touch with me - I might be able to make that happen.
+
+*PS*: If you hack up a Fire Eagle javascript sidebar widget that works on pages served as application/xml (preferably using the brilliant "wedje":http://www.mikeindustries.com/blog/archive/2007/06/widget-deployment-with-wedje technique) AND embraces the draft "geo":http://microformats.org/wiki/geo microformat, I'll buy you a pony. Seriously. Here's my location in <a href="http://fireeagle.research.yahoo.com/api/queryLoc.php?public=pmCqoI4HI3pIks9n80EN0uXo2GE- ">XML</a> - go to town.

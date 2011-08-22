@@ -1,0 +1,8 @@
+--- 
+layout: post
+typo_id: 23
+title: Tuesday Shorts
+---
+* <a href="http://christopholis.com/?p=9" rel="bookmark" title="Permanent Link: Pirates v. Vikings v. Ninjas">Pirates v. Vikings v. Ninjas</a> - the people I work with are flippin awesome.
+* Expect changes to this blog soon. "Typo":http://typo.leetsoft.com (the "Ruby on Rails":http://www.rubyondails.com powered blogging engine this site uses) is rapidly approaching a new release (check out how "busy":http://typo.leetsoft.com/trac/timeline they are recently), and I'm getting ansty. I'm thinking of checking out the trunk of typo and using this blog as a testing ground for patches. Stay tuned...
+* "Rojo":http://rojo.com, my current web based RSS reader, just isn't cutting it for me. It's   buggy, lacks XML feeds of any sort, and is too slow. Bloglines has always sucked. The perfect product just isn't there. Where is the "flickr":http://flickr.com or "del.icio.us":http://del.icio.us of RSS aggregators? Anyone?

@@ -1,0 +1,171 @@
+--- 
+layout: post
+typo_id: 3978
+title: "Rails Metal: a micro-framework with the power of Rails: \\m/"
+---
+*Updates*:
+
+* Clarified the distinction between Rails Metal and Rack middleware after more information from @Josh in the comments. Thanks!
+* Read more about metal from "DHH on the Official Rails Blog":http://weblog.rubyonrails.org/2008/12/17/introducing-rails-metal.
+* Demonstrate Testing Metal end points
+* Update Poller example to match new style
+* Cover Sinatra Integration
+* Correct benchmarks
+
+"Josh Peek":http://github.com/josh committed a new feature to Edge Rails today: "Rails Metal":http://github.com/rails/rails/commit/8c3a54366435eebc2c8aa63b63e1349ce74a7b38. After "the":http://github.com/rails/rails/commit/ed708307137c811d14e5fd2cb4ea550add381a82 "recent":http://github.com/rails/rails/commit/9c9da6c892d715ca22c3cf51f50deb1d80029c66 "work":http://github.com/rails/rails/commit/926844e869b747fa1e9474fd95f9b97fa04ae092 to replace Rails' crufty request processing code with "Rack":http://rack.rubyforge.org/ and integrate its "middleware support":http://github.com/rails/rails/commit/06ed8e451198b2296d8b2752741e259b4f995081, Rails Metal is a logical progression that allows Rails apps to use the power of Rack middleware to create super-fast actions.
+
+For example, here's a sample "Hello World" Metal:
+
+{% highlight ruby %}
+  class Poller < Rails::Rack::Metal
+    def call(env)
+      if env["PATH_INFO"] =~ /^\/poller/
+        [200, {"Content-Type" => "text/html"}, "Hello, World!"]
+      else
+        [404, {"Content-Type" => "text/html"}, "Not Found"]
+      end
+    end
+  end
+{% endhighlight %}
+
+And for comparison, a "Hello World" controller:
+
+{% highlight ruby %}
+    class OldPollerController < ApplicationController
+      def poller
+        render :text => "Hello World!"
+      end
+    end
+{% endhighlight %}
+
+So, let's fire up @ruby script/server@ and see what this gives us:
+
+{% highlight text %}
+{% highlight ruby %}  # traditional Controller
+  $ curl 127.0.0.1:3000/old_poller/poller
+    Hello World!
+  
+  # the new Metal
+  $ curl 127.0.0.1:3000/poller
+    Hello World!
+{% endhighlight %}
+
+So, the point of all of these other "micro-frameworks" is that they're faster than Rails, right? Let's benchmark this new "Hello World" Metal:
+
+{% highlight text %}
+{% highlight ruby %}  # first, let's benchmark the traditional controller
+  $ ab -n 1000 http://127.0.0.1:3000/old_poller/poller
+  ... snip ...
+  Requests per second:    408.45 [#/sec] (mean)
+  Time per request:       2.448 [ms] (mean)
+
+  # now for the Metal middleware
+  $ ab -n 1000 http://127.0.0.1:3000/poller
+  ... snip ...
+  Requests per second:    1154.66 [#/sec] (mean)
+  Time per request:       0.866 [ms] (mean)
+{% endhighlight %}
+
+For this trivial "Hello World" benchmark, Rails Metal is 2.8x faster than a Controller. Awesome. Have a couple actions of your app you need to optimize? Instead of breaking them out into a separate application using a micro-framework, add a Metal inside your existing app. You get the performance benefits of processing requests outside of ActionPack, and it's all integrated as a part of your Rails app. Easy!
+
+h3. Sinatra Metal
+
+You can "now":http://github.com/rails/rails/commit/61a41154f also use Sinatra to create Metal end points:
+
+{% highlight ruby %}
+  Sinatra::Application.default_options.merge!(:run => false, :env => 
+  :production)
+  Api = Sinatra.application unless defined? Api
+
+  get '/interesting/new/ideas' do
+    'Hello Sinatra!'
+  end
+{% endhighlight %}
+
+First person to show the use of a Merb app as a Metal end point wins a prize.
+
+h3. Standalone Execution
+
+Additionaly, Rails Metal are able to be executed in a separate process from your Rails application using @rackup@:
+
+{% highlight text %}
+{% highlight ruby %}  rackup -s mongrel app/metal/poller.rb
+{% endhighlight %}
+
+This runs the Poller Metal separeately from Rails, on it's own port (@rackup@ defaults to @9292@). This is perfect if you have an action that's taking a very long time (for example a file upload) that you'd like to split out from the normal Rails request processing queue.
+
+h3. Testing Metal
+
+*Update*: After several people commented asking how to test metal, DHH chimed in and recommend Integration Testing for Metal end points, as they hit the whole stack, and I submitted a patch cleaning up the Integration Testing behavior of Metal. Testing Metal end points now works just like any other Integration test:
+
+{% highlight ruby %}
+      class PollerTest < ActionController::IntegrationTest
+        test "poller returns hello world" do
+          get "/poller"
+          assert_response 200
+          assert_response :success
+          assert_response :ok
+          assert_equal "Hello World!", response.body
+        end
+      end
+{% endhighlight %}
+
+h3. Fun With Middleware
+
+So, essentially, Rails Metal is a thin wrapper around Rails' new Rack middleware support. Rack middleware is pretty powerful stuff: framework-independent components that process requests independently or in concert with other middleware. For example, here's a simple piece of Rack middleware that runs a regex on responses:
+
+{% highlight ruby %}
+class RegexMiddleware
+  def initialize(app)
+    @app = app
+  end
+
+  def call(env)
+    status, headers, response = @app.call(env)
+    new_response = []
+    response.each do |part|
+      new_response << part.gsub(/World/, 'Middleware')
+    end
+    [status, headers, new_response]
+  end
+end
+{% endhighlight %}
+
+To use this rack middleware in Rails, add this line to your @environment.rb@
+
+{% highlight ruby %}
+Rails::Initializer.run do |config|
+  ...
+  config.middleware.use RegexMiddleware
+end 
+{% endhighlight %}
+
+Restart your server, and check out what happens:
+
+{% highlight text %}
+{% highlight ruby %}  $ curl 127.0.0.1:3000/poller
+    Hello Middleware!
+{% endhighlight %}
+
+The Rack middleware filtered the output of the Metal we created before. This works with output generated by normal controllers and everything too. The possible uses of this pattern are endless:
+
+* Single Sign On
+* Request/Response Signing (think "OAuth":http://oauth.net)
+* Asset Compression
+
+"rack-contrib":http://github.com/rtomayko/rack-contrib/tree/master is a nice collection of Rack middleware if you're interested in more examples.
+
+Rails Metal is a simple wrapper around the existing (yet undocumented) Rack middleware support in Edge Rails that attempts to DRY the process of using middleware to create endpoints (like a poller) as opposed to filters (which are better implemented as traditional middleware, like the examples above). For example, Rails Metal might be used:
+
+* To speed up a 'poller' action called by all active users of a popular web-based chat application every 3 seconds (hint: Campfire).
+* To improve the performance of any API endpoint
+* To process file uploads outside of the Rails request queue
+* To authorize delivery of cached content
+
+h3. We don't need no stinking micro-frameworks
+
+With the additional of Metal and Rack middleware support, Rails effectively includes a micro-framework of its own; one that either tighly integrates with Rails or is executed separately - whichever the need dictates.
+
+This is a great response by the Rails team to all of the buzz surrouding micro-frameworks: a micro-framework with the power of Rails. I'm definitely going to try this approach to squeeze a couple extra requests per second out of a heavily trafficked API call - let me know in the comments if you find a use for it.
+
+Read up a bit more on "Rack":http://rack.rubyforge.org/ and then take a look at Josh's commit "Introducing Rails Metal":http://github.com/rails/rails/commit/8c3a54366435eebc2c8aa63b63e1349ce74a7b38 (and the ensuing comments) if you're interested for more information.

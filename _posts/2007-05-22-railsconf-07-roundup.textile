@@ -1,0 +1,27 @@
+--- 
+layout: post
+typo_id: 3829
+title: RailsConf '07 Roundup
+---
+<a style="float:left;margin:0 10px 5px 0"href="http://flickr.com/photos/x180/503535890/" title="David Heinemeier Hansson"><img src="http://farm1.static.flickr.com/191/503535890_b929f73b2e_m.jpg" /></a>
+<p style="float:left;clear:left;margin:0 10px 5px 0;width:160px;">_David Heinemeier Hansson_, by "James Duncan Davidson":http://flickr.com/photos/x180/. <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/" rel="license">Creative Commons BY-NC-ND</a></p>
+
+I spent the past several days in Portland, OR, for "RailsConf":http://conferences.oreillynet.com/rails/, the yearly gathering of the vibrant "Ruby on Rails":http://www.rubyonrails.org/ community. "O'Reilly Media":http://www.oreilly.com/ and "Ruby Central":http://www.rubycentral.com/ put on an incredible conference. My only disappointment was that I couldn't attend _all_ of the presentations. Luckily, most of the presentation slides are online (some with accompanying code!!):
+
+* "RailsConf 2007 Presentations - Official O'Reilly Page":http://conferences.oreillynet.com/pub/w/51/presentations.html
+* "RailsConf 2007 Presentations RailsConf Wiki":http://wiki.oreillynet.com/wiki/railsconf2007/index.cgi?PresentationSlides
+
+But by far, the most valuable part of the whole event was the time I spent in the hallways and around Portland with other Rails developers. In the two years I've been working with Rails, I've networked and collaborated with dozens if not hundreds of Rails developers online. It was great to finally be able to associate faces and voices with their respective names, blogs, and chat handles.
+
+I also wrangled "Erik Kastner":http://www.metaatem.net and "Charles Brian Quinn":http://www.seebq.com/ into the "Capazon":http://capazon.rubyforge.org/ project while in Portland - look for some updates on that front in the near future.
+
+A special thanks to the following folks for making my RailsConf an especially great time:
+
+* "Amy Hoy":http://slash7.com/
+* "Charles Brian Quinn":http://www.seebq.com/
+* "Erik Kastner":http://www.metaatem.net
+* "Jerry Richardson":http://jerryr.com/
+* "John Nunemaker":http://addictedtonew.com/
+* "Manfred Stienstra":http://operation0.org/
+* "Nic Williams":http://www.drnicwilliams.com/
+* "Rich Collins":http://blog.richcollins.net/

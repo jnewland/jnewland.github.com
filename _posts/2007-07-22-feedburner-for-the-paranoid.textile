@@ -1,0 +1,15 @@
+--- 
+layout: post
+typo_id: 3839
+title: FeedBurner for the Paranoid
+---
+After all of the "hubub":http://www.techmeme.com/070721/p21#a070721p21 this weekend about how "FeedBurner":http://www.feedburner.com/ is "'trouble'":http://www.scripting.com/stories/2007/07/21/whyFeedburnerIsTrouble.html and "'bad for us'":http://scobleizer.com/2007/07/22/feedburner-bad-for-us, I wanted to make a quick note of a couple of ways to serve your feeds through FeedBurner in a way that makes it possible to easily and seamlessly bring your feeds back under your control at any time. 
+
+# Use FeedBurner's "MyBrand":http://www.feedburner.com/fb/a/publishers/mybrand;jsessionid=90DFA112C8BFE3762618061519CF877F.fb1 service (which is now <a href="http://blogs.feedburner.com/feedburner/archives/2007/07/freeburner_for_everyone.php">free</a>) to serve your feeds using a domain you own. This lets you serve your feeds with a URI of http://feeds.mysillyblog.com/mysillyfeed or the like. In the event "Google 'preferring' Google Reader for feeds burned by FeedBurner":http://www.centernetworks.com/google-prefers-google (something I'm confident Google will never do), you'd just point feeds.mysillyblog.com back to a server you control, and in the blink of a "TTL":http://en.wikipedia.org/wiki/Time_to_live, your feeds are yours again. For details on implementing MyBrand, check out Danny Sullivan's great guide: "Stay Master of Your Feed Domain":http://searchengineland.com/070110-111256.php.
+# Advertise your feed at a URL on your blog (http://mysillyblog.com/index.xml), then redirect users to FeedBurner with a "302 Found":http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3 redirect. Straight from the HTTP specifications, this tells your browser or RSS reader: <blockquote>Since the redirection might be altered on occasion, the client SHOULD continue to use the Request-URI for future requests.</blockquote>
+Here's a nice guide detailing how to properly "redirect your feed to FeedBurner":http://www.456bereastreet.com/archive/200608/redirecting_feeds_to_feedburner/ using a _302 Found_ response code. In this case, if Google / FeedBurner ever sins against you or your mother, your feeds can be instantly and seamlessly moved away from FeedBurner by removing this redirect.
+# For the extra paranoid, combine methods 1 and 2!
+
+I'm a huge fan of FeedBurner, and like "Fred Wilson":http://avc.blogs.com/a_vc/2007/07/feedburner-and-.html, don't share the concerns of Dave Winer about FeedBurner's future. At last count, I manage around 225 feeds in several FeedBurner accounts, and don't ever plan on going back. But, if the need arises, I take comfort in knowing "how easy is is to leave":http://blogs.feedburner.com/feedburner/archives/2005/06/ciao_feedburner.php. To quote "Fred's post":http://avc.blogs.com/a_vc/2007/07/feedburner-and-.html:
+
+bq. That gives me all the comfort in the world. I love it when services make it easy to leave. When they do that, I tend to stay. 

@@ -1,0 +1,85 @@
+---
+layout: post
+title: "Where's the bloat: Tracking 'require' memory usage in Ruby and Rails"
+---
+
+<p>Among the other&nbsp;<a href="http://blog.evanweaver.com/articles/2009/04/09/ruby-gc-tuning/">awesome things</a> that&nbsp;<a href="http://rubyenterpriseedition.com/">Ruby Enterprise Edition</a>&#8217;s inclusion of&nbsp;the <a href="http://railsbench.rubyforge.org/svn/trunk/railsbench/GCPATCH">RailsBench GC patch</a> provides is the addition of the <code>allocated_size</code> method on Ruby&#8217;s&nbsp;<code>GC</code> constant.</p>
+
+
+
+
+
+
+
+<p><a href="http://twitter.com/lindvall">Eric Lindvall</a> recently <a href="http://bitmonkey.net/post/308322913/tracking-initial-memory-usage-by-file-in-ruby">devised a very clever use</a> for this <code>GC.allocated_size</code> method:</p>
+
+
+
+
+
+
+
+<blockquote>
+
+<p>If I wanted to see what was contributing to the large memory footprint of an application on startup, tracking how much memory was allocated during each <code>require</code> would give me a good place to start.</p>
+
+</blockquote>
+
+
+
+
+
+
+
+<p>Given the size of <code>GC.allocated_size</code> before and after require calls, we can determine the initial memory profile of any ruby gem, library, file, or Rails model.</p>
+
+
+
+
+
+
+
+<p>To use this to determine the initial memory profile of a beefy Rails application, you&#8217;ll first want to download his <a href="http://gist.github.com/264496">require_tracking hax</a>.&nbsp;Then, load your production Rails application&#8217;s environment with require_tracking turned on:</p>
+
+
+
+
+
+
+
+<pre><code>
+
+RAILS_ENV=production ruby -r/tmp/require_tracking.rb  -e "require 'config/environment'"
+
+Memory used by file:
+
+                                     File KB
+
+                            ------------- --------
+
+                      config/environment: 209,623
+
+/srv/myapp/releases/20091230003757/app/models/user: 73,653
+
+/srv/myapp/releases/20091230003757/app/models/store: 70,962
+
+                           ./config/boot: 15,021
+
+/srv/myapp/releases/20091230003757/app/models/discount_code: 9,813
+
+/srv/myapp/releases/20091230003757/app/models/order: 9,390
+
+./config/../vendor/rails/railties/lib/initializer: 9,348
+
+...
+
+</code></pre>
+
+
+
+<p>
+</p>
+
+
+
+<p>71.9 M used by the User model? Holy wow! I know what I&#8217;ll be doing today&#8230;.</p>

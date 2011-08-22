@@ -1,0 +1,63 @@
+--- 
+layout: post
+typo_id: 289
+title: Fear Advisory Level
+---
+	<table>
+		<tbody>
+			<tr align="center">
+				<td colspan="1" rowspan="1" style="vertical-align: top; background-color: rgb(255, 0, 0);"><h4>S E V E R E</h4>
+				Driving off the road: 254,419<br />
+				Falling: 146,542<br />
+				Accidental poisoning: 140,327<br /></td>
+			</tr>
+
+			<tr align="center">
+				<td></td>
+			</tr>
+
+			<tr align="center">
+				<td colspan="1" rowspan="1" style="vertical-align: top; background-color: rgb(255, 204, 0);"><h4>H I G H</h4>
+				Dying from work: 59,730<br />
+				Walking down the street: 52,000<br />
+				Accidentally drowning: 38,302<br /></td>
+			</tr>
+
+			<tr align="center">
+				<td></td>
+			</tr>
+
+			<tr align="center">
+				<td colspan="1" rowspan="1" style="vertical-align: top; background-color: rgb(238, 238, 0);"><h4>E L E V A T E D</h4>
+				Killed by the flu: 19,415<br />
+				Dying from a hernia: 16,742<br /></td>
+			</tr>
+
+			<tr align="center">
+				<td></td>
+			</tr>
+
+			<tr align="center">
+				<td colspan="1" rowspan="1" style="vertical-align: top; background-color: rgb(51, 51, 255);"><h4>G U A R D E D</h4>
+				Accidental firing of a gun: 8,536<br />
+				Electrocution: 5,171<br /></td>
+			</tr>
+
+			<tr align="center">
+				<td></td>
+			</tr>
+
+			<tr align="center">
+				<td colspan="1" rowspan="1" style="vertical-align: top; background-color: rgb(51, 204, 0);"><h4>L O W</h4>
+				Being shot by law enforcement: 3,949<br />
+				Terrorism: 3147<br />
+				Carbon monoxide in products: 1,554<br /></td>
+			</tr>
+
+			<tr align="center">
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<p>via "Wired News":http://www.wired.com/news/technology/0,71743-0.html?tw=rss.index</p>

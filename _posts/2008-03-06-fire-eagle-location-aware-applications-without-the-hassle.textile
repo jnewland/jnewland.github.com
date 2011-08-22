@@ -1,0 +1,70 @@
+--- 
+layout: post
+typo_id: 3884
+title: "Fire Eagle: Location-Aware Applications Without the Hassle"
+---
+"Tom Coates":http://www.plasticbag.org/ said it best "yesterday morning at ETech":http://next.yahoo.net/archives/100/lo-fire-eagle-take-flight: people have been touting 'location-aware services' as the next big thing for years. However, they've never taken off.
+
+What's been holding them back: acquiring reliable location data about users is a hard problem for developers to solve. 
+
+With yesterday's release of "Fire Eagle":http://fireagle.com/, that problem is now a whole lot easier to solve.
+
+h3. Ride the Fire Eagle Danger Day!
+
+So what is Fire Eagle? It's not "Twitter for location":http://www.techcrunch.com/2008/03/05/yahoos-twitter-for-location-goes-into-private-beta-with-near-zero-functionality/, that's for damn sure. Here's how the Yahoo! copywriting wizards describe it:
+
+bq. The secure and stylish way to share your location with sites and services online while giving you unprecedented control over your data and privacy. Weâ€™re here to make the whole web respond to your location and help you to discover more about the world around you.
+
+!{float:left;margin:10px}http://files.jnewland.com/fe-20080305-231647.png! At the diagram to the left shows, the Fire Eagle platform acts as an broker for your location data. One or many applications can set your location, and, provided you give them access, any other service can access this data. 
+
+This is one giant piece in the puzzle for location-based services. Users set their location in one place, and any number of other services are able to then act on this data however they please.
+
+The other piece in the puzzle: a Fire Eagle updater that requires absolutely NO user interaction. If I'm carrying around my iPhone in my pocket all day, why can't it tell Fire Eagle where I am?
+
+Of course, "Erica Sadun":http://ericasadun.com/ has already whipped up an unofficial iPhone app to ping Fire Eagle called "firefindme":http://ericasadun.com/?p=188. Installation isn't the easiest thing in the world - it assumes some launchd skillz to setup automatic updates. However, I'm sure a user friendly iPhone updater is "coming very shortly":http://developer.apple.com/ ;).
+
+h3. Developing Location-Aware Applications, Sites and Services with Fire Eagle
+
+I've got a full-on tutorial coming detailing how to make your Rails app talk to Fire Eagle, but in the meantime, check out my "Fire Eagle Ruby Gem":http://fireeagle.rubyforge.org/:
+
+@sudo gem install fireeagle@
+
+If Ruby's not your bag, don't worry - there are libraries for working with Fire Eagle in "javascript":http://fireeagle.yahoo.net/developer/code/javascript, "php":http://fireeagle.yahoo.net/developer/code/php, "perl":http://fireeagle.yahoo.net/developer/code/perl and "python":http://fireeagle.yahoo.net/developer/code/python.
+
+h3. Proof-of-Concept Twitter Bot <a name="instructions"></a><a name="firebot"></a>
+
+Just like "last time":http://soylentfoo.jnewland.com/articles/2007/06/24/fire-eagle-meet-danger-day, I've created a proof-of-concept twitter bot for testing out Fire Eagle: "firebot":http://twitter.com/firebot.
+
+First off: you need an invite to talk to Fire Eagle right now. Luckily, firebot is handing out a few. follow "firebot":http://twitter.com/firebot on Twitter, and then direct message it with 'invite'
+
+* d firebot invite
+
+Once you have an invite, direct message firebot with 'auth':
+
+* d firebot auth
+
+firebot will then reply with a link. You'll need to visit that link, authenticate with your Yahoo! account, and then authorize firebot with Fire Eagle.
+
+Once that's done, you can update your location with a direct message to firebot like so:
+
+* d firebot u Atlanta, GA
+* d firebot u Belize
+* d firebot u 30022
+* d firebot u 123 Anytown USA
+* etc
+
+To look up the location of someone else using firebot:
+
+* d firebot q jnewland
+* d firebot q cjmartin
+* d firebot q plasticbagUK
+
+h3. Disclaimer <a name="disclaimer"></a>
+
+By telling firebot your location, you agree to share your location information with all other users of firebot. All direct messages you send to firebot are stored permanently at Twitter. If at any point you'd like all of your information deleted from firebot, please contact <a href="http://twitter.com/jnewland">@jnewland</a>.
+
+h3. What's next?
+
+Get hackin' on your awesome location-based web app! Extra bonus points if you use the "Fire Eagle Rubygem":http://fireeagle.rubyforge.org/. If you've got a great idea for a Fire Eagle app and don't have an invite, just ask "firebot":http://twitter.com/firebot for one!
+
+*PS*: If you hack up a Fire Eagle javascript sidebar widget that works on pages served as application/xml (preferably using the brilliant "wedje":http://www.mikeindustries.com/blog/archive/2007/06/widget-deployment-with-wedje technique) AND embraces the draft "geo":http://microformats.org/wiki/geo microformat, I'll buy you a pony. Seriously.

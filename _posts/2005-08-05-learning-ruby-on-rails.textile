@@ -1,0 +1,40 @@
+--- 
+layout: post
+typo_id: 42
+title: Learning Ruby on Rails
+---
+I just responded to the third e-mail in a week from friends asking me _"How do I learn Ruby on Rails?"_ I've amassed a good collection of resources that are invaluable to anyone wanting to get on the proverbial train, and I figured it was wrong not to share it with everyone......so, here's your ticket:
+
+_NOTE: All of the following links assume some programming knowledge. If you're new to that too, check out "Learn To Program":http://pine.fm/LearnToProgram/, a wonderful intro to programming with Ruby_
+
+* First things first, "download rails":http://download.rubyonrails.com/
+
+* Step two, "buy the book":http://pragmaticprogrammer.com/titles/rails/index.html. I bought the PDF, and have gone through two home-printed copies while I'm waiting for the final verision to ship (should get here very soon!). The Depot example application will help you understand the underlying structure of Rails.
+
+* If you're new to Ruby as well, check out the "pickaxe":http://whytheluckystiff.net/ruby/pickaxe/, a great free Ruby book.
+
+* Check out the "Ruby on Rails Wiki":http://wiki.rubyonrails.com for tons of HowTo guides and community
+documentation. The search feature is helpful.
+
+* The "API reference":http://api.rubyonrails.com is the epitome of technical, but it sure is COMPREHENSIVE. Want to know if <code>ActiveRecord::Base##Find</code> returns an <code>Array</code> or a <code>Hash</code>? This is the place to go.
+
+* "Snippets tagged as rails":http://www.bigbold.com/snippets/tag/rails - Random rails code
+written by random people showcased on a website that was written on
+rails in less than 2 days. Lots of great code to steal, or use as
+inspiration.
+
+* Check out the "source code":http://www.typosphere.org/trac/browser/trunk of "typo":http://www.typosphere.org the weblog engine I'm using on "my blog":http://jnewland.com. This is an excellent application, as well as excellent code to use for
+inspiration.
+
+* Better yet, get a "Textdrive":http://www.textdrive.com hosting account and setup a Typo blog for yourself! Textdrive is the best webhost for Ruby on Rails.
+Seriously, $12 a month is cheap, and the support is great.
+
+* #rubyonrails on irc.freenode.net is a great place to real people about Rails. Have a question that's been bugging you? Ask one of the developers.
+
+* Sign up for the Rails "mailing list":http://lists.rubyonrails.org/mailman/listinfo/rails. It's high traffic, but very good, and people share code on there frequently.
+
+* Finally, immerse yourself in Rails. Read the "links tagged as rails at del.icio.us":http://del.icio.us/tag/rails,  read the "Ruby on Rails Weblog":http://weblog.rubyonrails.com/, and check out the "lead developer's blog":http://www.loudthinking.com/. The Rails (and web development) community is rapidly changing, and it's to your advantage to stay on top of it.
+
+That should keep anyone who's interested in Ruby on Rails occupied for at least, oh, say, a couple months.
+
+_NOTE: If you feel that any links should be added to or removed from this list, post a message in the comments._

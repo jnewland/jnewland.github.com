@@ -1,0 +1,18 @@
+--- 
+layout: post
+typo_id: 12
+title: Go West, Young Man
+---
+<div style="float: right; margin-left: 10px;margin-bottom: 10px;"><a href="http://www.flickr.com/photos/mojo/16721502/" title="Welcome to Bozeman, Montana"><img src="http://photos12.flickr.com/16721502_d538b3f06c_m.jpg" alt="" style="border: solid 1px #000000;" /></a><br /><span style="font-size: 0.9em; margin-top: 0px;">via <a href="http://www.flickr.com/people/mojo/">mojo!'s photos</a>@<a href="http://flickr.com">flickr</a></span></div>
+
+Bozeman, MT is of great interest to me lately. Expect many more pictures coming soon :)
+
+* "Google Maps - bozeman mt":http://maps.google.com/maps?q=bozeman+mt&ll=45.670767,-111.062078&spn=0.062133,0.081050&t=k&hl=en - looks cool from the air
+* "Google Search: bar OR pub near bozeman mt":http://local.google.com/local?hl=en&lr=&safe=off&client=firefox&rls=org.mozilla%3Aen-US%3Aunofficial&q=bar+OR+pub&near=bozeman+mt&btnG=Search&sc=1 - so it's a college town :)
+* "Bozeman Pass I-90 MP 321.8 Elev 5270' W":http://rwis.mdt.state.mt.us/scanweb/swframe.asp?Pageid=Camera&Units=English&Groupid=564000&Sysid=564&Rpuid=2&Senid=0&DisplayClass=Java&SenType=All&SenStatus=&Camera=1 - the traffic looks pretty light
+* "Bozeman's Community Co-op":http://www.bozo.coop/ - mmm good food :)
+* "Big Sky Country on Flickr - Photo Sharing!":http://flickr.com/photos/mojo/16726234/ and 
+"Ayrek.com - Pics Around Bozeman":http://www.ayrek.com/Bozeman/bozopics_p.html - wow! bozeman looks beautiful!
+* "Historical weather data in bozeman, mt":http://www.wunderground.com/cgi-bin/histGraphNormals?ID=KBZN&records=on&normals=on&lastyear=on - but it's COOOLLD. brrrrr.
+
+_btw, all of these links are tagged as "bozeman":http://del.icio.us/jbnewland/bozeman in my "del.icio.us":http://del.icio.us bookmarks_

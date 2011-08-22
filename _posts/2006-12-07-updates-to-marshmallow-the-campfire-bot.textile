@@ -1,0 +1,32 @@
+--- 
+layout: post
+typo_id: 295
+title: Updates to Marshmallow, the Campfire bot
+---
+At work, we've been using "Campfire":http://campfirenow.com, the wonderful web-based group chat application from "37signals":http://37signals.com for a while now, and have found it essential in our virtual environment.
+
+I recently discovered "Marshmallow":http://blog.caboo.se/articles/2006/04/14/meet-marshmallow-the-campfire-bot, the unofficial Campfire API, and setup deploy notifications, and couple other little hacks to keep the virtual office up to speed. However, Marshmallow was missing a critical feature (in my mind): the ability to watch and process others' messages in the room. So, I spent a couple minutes this morning and added a new @watch@ method:
+
+!http://files.jnewland.com/elsington.png!
+
+I also added a new @topic@ method to set the current room's topic - we use it to match Basecamp project numbers and put the project URL in the topic.
+
+The SVN server for Marshmallow seems to be down, and I can't seem to get in touch with "court3nay":http://blog.caboo.se/, so I figured I'd just let this loose. Without further ado, here's "Marshmallow 0.3":http://files.jnewland.com/marshmallow.rb.
+
+h3. Example Usage
+
+{% highlight ruby %}
+{% highlight ruby %}#!/usr/local/bin/ruby
+
+require 'marshmallow'
+
+bot = Marshmallow.new(:domain => 'yoursubdomain')
+bot.login :method => :login, :username => "email@you.com", :password => "secret", :room => "34567"
+
+while(true)
+  bot.watch do |m|
+    bot.say("Hello, #{m[:person]}") if m[:message].match(/^(hello|hi|hey)$/i)
+  end
+  sleep 3
+end
+{% endhighlight %}

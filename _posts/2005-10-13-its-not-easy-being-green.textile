@@ -1,0 +1,16 @@
+--- 
+layout: post
+typo_id: 76
+title: It's Not Easy Being Green
+---
+To celebrate the "Typo Theme Contest":http://typogarden.com/, I'll be redesigning my blog numerous times this month. This edition will be called _Simple_, and will be tested here for a few days, submitted, and then be replaced by a new design.
+
+Features of _Simple_:
+
+* 100% less graphics
+* Pleasant, %{color:green}green% headers.
+* Clean, easy to read fonts (Georgia for the headers, Verdana for the body text)
+* Only the most recent post is displayed, with links to most of the older ones below. I'm still kind of iffy about this. I may change it up so that only posts from the last week are displayed, instead of just one. Maybe I'll show snippets, ala Gmail. Who knows.
+* A search in progress now displays text instead of that pesky blue spinner.
+
+Anyway, if you have anything to say about this design, leave a comment! I'm open to suggestions.

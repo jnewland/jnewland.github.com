@@ -1,0 +1,12 @@
+--- 
+layout: post
+typo_id: 64
+title: Gas Shortage
+---
+A developing story in the South today is the gas shortage that is taking place due to some major pipelines being down. "The AJC has this":http://www.ajc.com/news/content/business/0805/31bizgasprices.html:
+
+bq. "The two pipelines that bring gasoline and jet fuel to the region are down ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬? powerless to pump as Hurricane Katrina wreaked havoc on electrical infrastructure. <br /><br />The metro Atlanta region generally has about a 10-day supply of gasoline in inventory, said BP spokesman Michael Kumpf. The pipelines have been down for two days."
+
+Gas is *$2.99 per gallon* for regular at the station right outside my apartment.  My boss just got off of the phone with his Mom who lives in rural Georgia - drivers from smaller towns surrounding where she lives are coming to her town to get gas because the smaller town stations are out.
+
+Anyone have a moped they want to sell? :-/  Hope that when the power is restored to those pipelines prices go back down, but "CNN doesn't think that will happen":http://money.cnn.com/2005/08/31/news/gas_prices/index.htm?cnn=yes. This doesn't look good.

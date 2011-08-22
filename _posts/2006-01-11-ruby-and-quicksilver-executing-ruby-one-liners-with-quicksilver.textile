@@ -1,0 +1,37 @@
+--- 
+layout: post
+typo_id: 142
+title: "Ruby and Quicksilver: Executing Ruby one-liners with Quicksilver"
+---
+To plug Ruby directly into your brain,  take three short breaths, mutter a prayer to Matz, and then follow these instructions:
+
+<em>Prerequisites: "Mac OS X":http://www.apple.com/macosx/ Panther or greater and "Quicksilver":http://quicksilver.blacktree.com/ </em>
+
+
+<ol>
+<li>Download this humble <a href="http://files.jnewland.com/neural_ruby.zip">Applescript</a>
+{% highlight ruby %}
+#<using terms from application "Quicksilver"
+	on process text t
+		do shell script "ruby -00 -e '" & t & "'"
+	end process text
+end using terms from{% endhighlight %}</li>
+<li>Unzip the script and copy it to @~/Library/Application Support/Quicksilver/Actions/@</li>
+<li>Restart Quicksilver</li>
+</ol>
+
+Once you've plugged in, Ruby is just a blink away: 
+
+<ol>
+<li>Invoke Quicksilver (@CTRL-Space@)</li>
+<li>Type a period (@.@) followed by your one-line stroke of genius, such as:
+{% highlight ruby %}
+#<[ "in", "me", "plug" ].reverse_each {|x| print x.upcase, " " }{% endhighlight %}</li>
+<li>Press @TAB@</li>
+<li>Type until @ruby@ is displayed in the second pane</li>
+<li>Press @Return@</li>
+</ol>
+
+The results of your Ruby one-liner ('@PLUG ME IN@' in this case) are placed back into the first pane of Quicksilver for your digestion.
+
+_Thanks to "bsg":http://www.rousette.org.uk/ for the "inspiration":http://www.rousette.org.uk/blog/archives/2004/09/24/using-ruby-one-liners-with-quicksilver/. _

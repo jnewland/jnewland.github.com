@@ -1,0 +1,44 @@
+---
+layout: post
+title: Using Screen to manage multiple persistent SSH connections
+---
+
+<p>In the scope of my work at Rails Machine, I manage <b>a lot</b> of servers.&nbsp;Thousands, even. That many servers means that I often have dozens of SSH connections open at a time; some tailing log files, some running <code>top</code>, <code>vmstat</code>, or the likes, and some just waiting at a shell prompt for a rapid fire command.</p>
+
+<p>To make things more complicated, I&#8217;m not always in the same place all day. Between my home office, the datacenter, Starbucks, etc, my laptop is open and shut plenty of times a day. SSH timeouts used to be my worst enemy. Enter screen&#8230;</p>
+
+<p>Put simply, <a href="http://www.gnu.org/software/screen/manual/screen.html">screen</a> is a window manager for virtual terminals.&nbsp;To create a new window in screen, type&nbsp;<code>C-a, c</code>. That means hold down Control, press a, release Control, and press c. To switch between windows, press&nbsp;<code>C-a, space</code>. You can even switch to numbered windows with&nbsp;<code>C-a, [0-9]</code>.</p>
+
+<p>Screen is incredibly useful locally as a replacement for tabbed windows in Terminal.app, but it really shines when run from an always-on server. In my case, I run screen on a gateway/firewall server on the Rails Machine internal network, but this will work wherever you can keep an always-on server with access to all the servers you need. With an always-on screen session:</p>
+
+<ul><li><b>I never have to worry about SSH timeouts.</b> If run inside a screen session, I know a command will persist forever. If my SSH connection to the gateway times out, all that&#8217;s needed is a quick <code>screen -D -RR</code> and my previous session is back up and running.</li>
+
+<li><b>I can access the same screen session from multiple computers.</b> If I run downstairs for a quick sammich and want to check on the progress of a test suite run, I can login to the gateway from my kitchen computer, run <code>screen -D -RR</code>, and grab control of the screen session from my laptop upstairs. Everything is exactly as I left it.</li>
+
+</ul><p>All of this is fine and dandy, but a while back I started noticing a common pattern emerging in my use of screen: I&#8217;d open a new window (<code>C-a, c</code>), then ssh to a server. Over and over again. Two steps. Then, once my session was done, I&#8217;d <code>exit</code> the SSH connection, then <code>exit</code> the local shell again. Again, two steps. That&#8217;s one step too many, twice. No good. So, after a little research, I created a custom&nbsp;<code>ssh</code> function in my&nbsp;<code>~/.bashrc</code>:</p>
+
+<pre>function ssh() {
+
+  eval last_arg=\$$#
+
+  screen -t "$last_arg" ssh "$@";
+
+}</pre>
+
+<p>Now, when I run <code>ssh user@foo</code> inside a screen session, a new window opens for the SSH connection with it&#8217;s title set to &#8216;<code>user@foo</code>.&#8217; All arguments passed to SSH work as intended, but the screen title only gets the <code>user@host</code> portion of the command. When this SSH session is terminated, the screen window is automatically closed - no need to terminate the local shell containing the SSH process. Nice!</p>
+
+<p>By default, screen doesn&#8217;t display the title of all windows, but if you toss this line into your <code>~/.screenrc, </code>you&#8217;ll get a nice status line at the bottom of your screen with the number and title of each open window:</p>
+
+<pre>hardstatus alwayslastline "%{gk}[%{G}%H%{g}][%=%{wk}%?%-Lw%?%{R}[%{W}%n*%t%?(%u)%?%{R}]%{w}%?%+Lw%?%?%=%{g}][%{B}%m/%d %{G}%C%a%{g}]"</pre>
+
+<p>Put this all together, and you get a screen session that looks like this:<img src="http://files.jnewland.com/screen-example-20090619-171814.jpg"/></p>
+
+<p>When you need to SSH to a new host, just switch back to the gateway window by typing <code>C-a, 0</code>, type <code>ssh user@host</code>, and a new window will be opened for this SSH connection. The gateway window is left clean, ready to initiate another SSH connection when needed.</p>
+
+<p>As an added bonus, if you toss this in your <code>~/.bashrc</code>, you&#8217;ll get fancy tab-completion on hosts in your <code>~/.ssh/known_hosts</code> file:</p>
+
+<pre>SSH_COMPLETE=( $(cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | egrep -v [0123456789]) )
+
+complete -o default -W "${SSH_COMPLETE[*]}" ssh</pre>
+
+<p>Sick, eh?</p>

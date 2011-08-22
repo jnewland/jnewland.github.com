@@ -1,0 +1,14 @@
+--- 
+layout: post
+typo_id: 148
+title: Comments vs Trackbacks
+---
+I'm sick of expaining the difference between comments and trackbacks to people. For the last time:
+
+Comments are comments are comments. Trackbacks are comments. Readers want to see what other people have to say about your post, they couldn't care less if someone made the comment on your blog, blogged about it themselves, emailed it to you, or muttered it in their sleep.
+
+In "A Beginner's Guide to TrackBack":http://www.movabletype.org/trackback/beginners/, Ben and Mena ramble for a bit and then get to the point and say:
+
+bq. "This is a form of remote comments."
+
+Separating comments to your posts in your blog's UI into two lists, 'Comments' and 'Trackbacks' is confusing to the reader. In the pending redesign of this site, all comments will be displayed below their respective post in chronological order. No distinction will be made between the different types of comments, nor is such any distinction necessary. Let's quit making blogging any more confusing than it should be.

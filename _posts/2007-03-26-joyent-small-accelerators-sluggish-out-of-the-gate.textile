@@ -1,0 +1,30 @@
+--- 
+layout: post
+typo_id: 3638
+title: Joyent Small 'Accelerators' Sluggish out of the Gate
+---
+I've been a long-time fan and supporter of "Textdrive":http://www.textdrive.com/ Web Hosting - now a subsidiary of "Joyent":http://www.joyent.com. They've done a great job over the years of positioning themselves at the forefront of web hosting technology - be it shared "Ruby on Rails":http://www.rubyonrails.com/ hosting before the masses, or their new "Accelerator":http://radiant.joyent.com/accelerator/pricing/ Solaris VPS offering. However, it seems as if Joyent's client services department isn't in sync with their sharp tech arm.
+
+When Joyent "announced their new low-end Accelerators":http://joyeur.com/2007/03/06/accelerators-now-start-at-us45 almost 3 weeks ago, I immediately recommended one to a friend. He signed up right away. Several days later - March 9th - he still hadn't heard anything from Joyent regarding his purchase past the initial confirmation message, including this notice:
+
+bq. You can expect to receive detailed information about access to your account shortly. In the interest of getting to know our clients right from the start, all accounts are lovingly created, in the traditional artisanal manner, by hand. Thus, the ETA for your login information can vary, depending on the current queue.
+
+While this notice will be familiar to anyone who has ever used Textdtive, what's not familiar is a delay of anything more than a day or two. After my friend asked me if this was normal or not, I sent an email to a contact at Joyent asking them for an ETA. The same day, my friend (and, as I later discovered, all who ordered a small Accelerator) got this message from Joyent support:
+
+bq. Due to some unforeseen issues, we will be delivering your new small Accelerator *the week of March 19th*. You will not be charged for the system until we deliver you the login information to your system.  We apologize for the delay, and know that we are working hard to ensure that your Accelerator system will be a top notch product when we deliver it to you.
+
+The week of March 19th is dead and gone, and my friend hasn't heard a peep from Joyent. The "buzz on Textdrive's forums":http://forum.textdrive.com/viewtopic.php?id=14914 shows that we're not the only ones, and that the latest story a forum member heard from Joyent staff is: _"...hardware delivery issues. They don't have an ETA."_. This is downright unacceptable on several fronts:
+
+# My friend didn't get a notice of the delay.
+# Joyent apparently was selling access to hardware they didn't yet have.
+# The "Accelerators' Pricing Page":http://radiant.joyent.com/accelerator/pricing/ still promises delivery of your order within 3 days.
+
+So, my friend is left to do nothing but wait. In the meantime, however, I have made note of another "feature":http://joyeur.com/2007/03/22/joyent-slingshot promised to users of the Accelerators. While this is a revolutionary offering, who knows if the whole damn kit and caboodle goes the way of "Textpanel":http://www.google.com/search?hl=en&safe=off&q=textpanel+site%3Atextdrive.com&btnG=Search, which was used to lure users in as early as "April 2005":http://www.loudthinking.com/arc/000444.html and, despite being "quitely killed":http://forum.textdrive.com/viewtopic.php?id=14413 just last month, is "still":http://textdrive.com/faqs/13 being hawked on Textdrive's website. DUKE NUKEM FOREVER!
+
+*UPDATE*: My friend just received this email from Joyent:
+
+bq. We are experiencing unexpected hardware delivery delays on equipment required to deliver the small, $45 per month accelerators.  We are working with the supplier to expedite the equipment.  Please know that we will deliver your accelerator as soon as possible and you will not be charged until we deliver the login credentials.
+
+bq. We apologize for the inconvenience.
+
+It looks as if Joyent started selling this plan without having the equipment on hand. What a shame.

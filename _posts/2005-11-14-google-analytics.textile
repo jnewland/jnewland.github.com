@@ -1,0 +1,14 @@
+--- 
+layout: post
+typo_id: 113
+title: Google Analytics
+---
+I swear Google is stealing my ideas. I had a frustrating experience with the industry standard webstats package, Urchin, last night, and complained to a couple people about it.
+
+This morning, I awake to a new Google product, "Google Analytics":http://www.google.com/analytics, which is the result of Google purchasing Urchin a while back. On the Analytics home page is a bulleted list detailing Google's solution to every one of my gripes with Urchin. Fishy, eh? :)
+
+However, a stats package can't really be evaluated until it has data in it. Here's how it looks right now:
+
+!http://files.jnewland.com/analytics.png!
+
+Pretty impressive! I especially like the "Executive Overview" idea, as well as the Geo Map! Check back soon, I'll post an updated screenshot with some real numbers.
