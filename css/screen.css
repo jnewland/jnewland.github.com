@@ -46,6 +46,12 @@ a:visited {
   color: #a0a;
 }
 
+h1 a,
+h1 a:visited {
+  color: #00a;
+  text-decoration: none;
+}
+
 table {
   font-size: inherit;
   font: 100%;
@@ -92,6 +98,12 @@ ul.posts {
   margin-bottom: 2em;
 }
 
+  .site .title h1,
+  .site .title h3 {
+    font-size: 1em;
+    display: inline;
+  }
+
   .site .title a {
     color: #a00;
     text-decoration: none;
@@ -104,7 +116,6 @@ ul.posts {
   .site .title a.extra {
     color: #aaa;
     text-decoration: none;
-    margin-left: 1em;
   }
 
   .site .title a.extra:hover {

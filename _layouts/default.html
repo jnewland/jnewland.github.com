@@ -17,8 +17,11 @@
 
 <div class="site">
   <div class="title">
-    <a href="/">Jesse Newland</a>
-    <a class="extra" href="/">home</a>
+    <h3><a href="/">Jesse Newland</a></h3>
+    <a class="extra" href="/">/</a>
+    {% if page.url != '/index.html' %}
+      <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    {% endif %}
   </div>
   
   {{ content }}
