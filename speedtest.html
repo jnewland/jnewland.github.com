@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script type='text/javascript'>
+    var tests = {
+      "github.com": {
+        "URI":    "https://github.com/images/modules/integrations/screens/pivotaltracker@2x.jpg",
+        "bytes":  572150
+      },
+      "githubusercontent.com": {
+        "URI":    "https://cloud.githubusercontent.com/assets/47/5653388/9c6339cc-966e-11e4-8e8d-f7da87512a90.png",
+        "bytes":  572150
+      }
+    }
+
+    window.onload = function() {
+      window.setTimeout(speedTest, 1, "github.com");
+      window.setTimeout(speedTest, 1, "githubusercontent.com");
+    };
+
+    function speedTest(id) {
+      var progress = document.getElementById(id);
+      progress.innerHTML = "Testing download from " + id + "...";
+      download = new Image();
+      var startTime, endTime;
+      download.onload = function () {
+        endTime = (new Date()).getTime();
+        duration = (endTime - startTime) / 1000;
+        bytes = tests[id]["bytes"];
+        bits = bytes * 8;
+        progress.innerHTML = bytes + " bytes downloaded from " + id + " at " + (((bits / duration) / 1024) / 1024).toFixed(2) + " Mbps";
+      }
+
+      download.onerror = function (err, msg) {
+        progress.innerHTML = "Error downloading";
+      }
+
+      startTime = (new Date()).getTime();
+      download.src = tests[id]["URI"] + "?n=" + startTime;
+    }
+    </script>
+  </head>
+  <body>
+    <h1 id="github.com">...</h1>
+    <h1 id="githubusercontent.com">...</h1>
+  </body>
+</html>
