@@ -13,11 +13,10 @@
     }
 
     window.onload = function() {
-      window.setTimeout(speedTest, 1, "github.com");
-      window.setTimeout(speedTest, 1, "githubusercontent.com");
+      window.setTimeout(speedTest, 1, ["github.com", "githubusercontent.com"]);
     };
-
-    function speedTest(id) {
+    function speedTest(todo) {
+      var id = todo.shift();
       var progress = document.getElementById(id);
       progress.innerHTML = "Testing download from " + id + "...";
       download = new Image();
@@ -28,6 +27,9 @@
         bytes = tests[id]["bytes"];
         bits = bytes * 8;
         progress.innerHTML = bytes + " bytes downloaded from " + id + " at " + (((bits / duration) / 1024) / 1024).toFixed(2) + " Mbps";
+        if (todo.length > 0) {
+          window.setTimeout(speedTest, 1, todo);
+        }
       }
 
       download.onerror = function (err, msg) {
